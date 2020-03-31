@@ -448,6 +448,11 @@ in
 
   closureInfo = callPackage ../build-support/closure-info.nix { };
 
+  fetchSbt = callPackage ../build-support/scala/fetchsbt.nix { };
+  buildSbtPackage = callPackage ../build-support/scala/default.nix { };
+
+  foo = callPackage ../../foo.nix { };
+
   setupSystemdUnits = callPackage ../build-support/setup-systemd-units.nix { };
 
   shortenPerlShebang = makeSetupHook
