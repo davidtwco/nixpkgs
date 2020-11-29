@@ -1,0 +1,5 @@
+# Wooting One
+SUBSYSTEM=="usb", ENV{PRODUCT}=="3eb/ff01/*", ENV{INTERFACE}=="255/93/1", TAG+="systemd", ENV{SYSTEMD_WANTS}="wooting-xinput@ff01"
+
+# Wooting Two
+SUBSYSTEM=="usb", ENV{PRODUCT}=="3eb/ff02/*", ENV{INTERFACE}=="255/93/1", TAG+="systemd", ENV{SYSTEMD_WANTS}="wooting-xinput@ff02"
